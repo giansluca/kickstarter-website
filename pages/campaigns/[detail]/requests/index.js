@@ -43,7 +43,7 @@ const RequestIndex = () => {
                     .fill()
                     .map((element, index) => {
                         return campaign.methods.requests(index).call();
-                    })
+                    }),
             );
 
             setRequestInfo({ campaignAddress, requests, requestCount, approversCount });

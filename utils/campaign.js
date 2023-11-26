@@ -1,4 +1,4 @@
-import Web3 from "web3";
+import { Web3 } from "web3";
 import campaign from "./abi/Campaign.json";
 
 const getCampaign = async (address) => {

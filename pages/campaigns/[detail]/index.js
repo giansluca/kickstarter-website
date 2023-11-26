@@ -20,22 +20,22 @@ const renderCards = (campaignSummary) => {
             style: { overflowWrap: "break-word" },
         },
         {
-            header: minimumContribution,
+            header: minimumContribution.toString(),
             meta: "Minimum contribution",
             description: "You must contribute at least this much wei to become an approver",
         },
         {
-            header: requestCount,
+            header: requestCount.toString(),
             meta: "Number of requests",
             description: "A request tries to withdraw money from the contract. Requests must be approved by approvers",
         },
         {
-            header: approversCount,
+            header: approversCount.toString(),
             meta: "Number of approvers",
             description: "Number of people who have already donated to this campaign",
         },
         {
-            header: balance,
+            header: balance.toString(),
             meta: "Campaign balance (ether)",
             description: "The balance is how much money this campaign has left to spend",
         },

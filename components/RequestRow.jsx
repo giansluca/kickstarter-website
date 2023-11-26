@@ -8,7 +8,7 @@ const RequestRow = (props) => {
     const router = useRouter();
     const { Row, Cell } = Table;
     const { id, campaignAddress, request, approversCount } = props;
-    const readyToFinalize = request.approvalCount > approversCount / 2;
+    const readyToFinalize = request.approvalCount > approversCount / 2n;
 
     async function onApprove() {
         if (!(await isWalletConnected())) {
@@ -42,10 +42,10 @@ const RequestRow = (props) => {
         <Row disabled={request.complete} positive={readyToFinalize && !request.complete}>
             <Cell>{id}</Cell>
             <Cell>{request.description}</Cell>
-            <Cell>{request.value}</Cell>
+            <Cell>{request.value.toString()}</Cell>
             <Cell>{request.recipient}</Cell>
             <Cell>
-                {request.approvalCount}/{approversCount}
+                {request.approvalCount.toString()}/{approversCount.toString()}
             </Cell>
             <Cell>
                 {request.complete ? null : (
